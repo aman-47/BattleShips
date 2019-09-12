@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GameResources.cs">
+    <Files>
+      <File FileName="src/GameMain.cs" Line="6" Column="9" />
+      <File FileName="src/GameResources.cs" Line="14" Column="29" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyGameUnx" expanded="True">
+            <Node name="MyGameUnx" expanded="True">
+              <Node name="src" expanded="True">
+                <Node name="GameResources.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MyGameUnx PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Unix|AnyCPU" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

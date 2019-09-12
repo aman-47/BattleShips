@@ -1,0 +1,2 @@
+/home/harry/Documents/SWINBURNE/2019/developmentproject/BattleShips/obj/Debug-Unix/MyGameUnx.csprojAssemblyReference.cache
+/home/harry/Documents/SWINBURNE/2019/developmentproject/BattleShips/obj/Debug-Unix/MyGameUnx.csproj.CoreCompileInputs.cache
