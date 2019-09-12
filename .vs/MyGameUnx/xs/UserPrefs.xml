@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/GameResources.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GameMain.cs">
     <Files>
-      <File FileName="src/GameMain.cs" Line="6" Column="9" />
-      <File FileName="src/GameResources.cs" Line="14" Column="29" />
+      <File FileName="src/GameMain.cs" Line="12" Column="16" />
+      <File FileName="src/GameResources.cs" Line="129" Column="41" />
+      <File FileName="src/HighScoreController.cs" Line="16" Column="1" />
+      <File FileName="src/Model/Player.cs" Line="13" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyGameUnx" expanded="True">
             <Node name="MyGameUnx" expanded="True">
+              <Node name="Resources" expanded="True" />
               <Node name="src" expanded="True">
-                <Node name="GameResources.cs" selected="True" />
+                <Node name="GameMain.cs" selected="True" />
               </Node>
             </Node>
           </Node>
