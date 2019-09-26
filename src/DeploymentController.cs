@@ -142,12 +142,12 @@ namespace BattleShips
                 }
             }
 
-            if (HumanPlayer.ReadyToDeploy)
-                SwinGame.DrawBitmap (GameImage ["PlayButton"], PLAY_BUTTON_LEFT, TOP_BUTTONS_TOP);
+            if (GameController.HumanPlayer.ReadyToDeploy)
+                SwinGame.DrawBitmap (GameResources.GameImage("PlayButton"), PLAY_BUTTON_LEFT, TOP_BUTTONS_TOP);
 
-            SwinGame.DrawBitmap (GameImage ["RandomButton"], RANDOM_BUTTON_LEFT, TOP_BUTTONS_TOP);
+            SwinGame.DrawBitmap (GameResources.GameImage("RandomButton"), RANDOM_BUTTON_LEFT, TOP_BUTTONS_TOP);
 
-            DrawMessage ();
+            UtilityFunctions.DrawMessage ();
         }
 
         /// <summary>
