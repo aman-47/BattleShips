@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/DeploymentController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/EndingGameController.cs">
     <Files>
       <File FileName="src/GameMain.cs" Line="18" Column="51" />
       <File FileName="src/DiscoveryController.cs" Line="39" Column="5" />
-      <File FileName="src/DeploymentController.cs" Line="69" Column="59" />
+      <File FileName="src/DeploymentController.cs" Line="165" Column="14" />
+      <File FileName="src/EndingGameController.cs" Line="34" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +14,7 @@
               <Node name="Resources" expanded="True" />
               <Node name="src" expanded="True">
                 <Node name="Model" expanded="True" />
-                <Node name="DeploymentController.cs" selected="True" />
+                <Node name="EndingGameController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
