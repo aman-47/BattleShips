@@ -12,9 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using SwinGameSDK;
 
-namespace MyGame
-{
-    public static class GameResources
+public static class GameResources
     {
         private static void LoadFonts()
         {
@@ -304,4 +302,4 @@ namespace MyGame
             SwinGame.ProcessEvents();
         }
     }
-}
+

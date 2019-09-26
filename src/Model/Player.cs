@@ -1,7 +1,3 @@
-/// <summary>
-/// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
-/// all ships are deployed and if all ships are detroyed. A Player can also attach.
-/// </summary>
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +11,11 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
+
+/// <summary>
+/// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
+/// all ships are deployed and if all ships are detroyed. A Player can also attach.
+/// </summary>
 
 public class Player : IEnumerable<Ship>
 {
@@ -193,6 +194,11 @@ public class Player : IEnumerable<Ship>
         return lst.GetEnumerator();
     }
 
+    IEnumerator<Ship> IEnumerable<Ship>.GetEnumerator ()
+    {
+        return GetShipEnumerator ();
+    }
+
     /// <summary>
     /// Makes it possible to enumerate over the ships the player
     /// has.
@@ -206,7 +212,7 @@ public class Player : IEnumerable<Ship>
         lst.AddRange(result);
 
         return lst.GetEnumerator();
-    }
+    }   
 
     /// <summary>
     /// Vitual Attack allows the player to shoot
@@ -286,4 +292,6 @@ public class Player : IEnumerable<Ship>
             while (!placementSuccessful);
         }
     }
+
+
 }

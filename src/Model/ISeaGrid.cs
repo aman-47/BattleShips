@@ -1,7 +1,3 @@
-/// <summary>
-/// The ISeaGrid defines the read only interface of a Grid. This
-/// allows each player to see and attack their opponents grid.
-/// </summary>
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,6 +10,11 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
+
+/// <summary>
+/// The ISeaGrid defines the read only interface of a Grid. This
+/// allows each player to see and attack their opponents grid.
+/// </summary>
 
 public interface ISeaGrid
 {

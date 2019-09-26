@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/GameResources.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/DeploymentController.cs">
     <Files>
-      <File FileName="src/GameMain.cs" Line="14" Column="34" />
-      <File FileName="src/Model/Player.cs" Line="198" Column="13" />
-      <File FileName="src/Model/SeaGridAdapter.cs" Line="18" Column="31" />
-      <File FileName="src/Model/ISeaGrid.cs" Line="39" Column="41" />
-      <File FileName="src/Model/SeaGrid.cs" Line="80" Column="25" />
-      <File FileName="src/GameResources.cs" Line="1" Column="1" />
+      <File FileName="src/GameMain.cs" Line="18" Column="51" />
+      <File FileName="src/DiscoveryController.cs" Line="39" Column="5" />
+      <File FileName="src/DeploymentController.cs" Line="69" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +13,7 @@
               <Node name="Resources" expanded="True" />
               <Node name="src" expanded="True">
                 <Node name="Model" expanded="True" />
-                <Node name="GameResources.cs" selected="True" />
+                <Node name="DeploymentController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
