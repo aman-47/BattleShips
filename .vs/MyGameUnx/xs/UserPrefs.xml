@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/MenuController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/DiscoveryController.cs">
     <Files>
       <File FileName="src/GameMain.cs" Line="18" Column="51" />
-      <File FileName="src/DiscoveryController.cs" Line="39" Column="5" />
+      <File FileName="src/DiscoveryController.cs" Line="51" Column="53" />
       <File FileName="src/DeploymentController.cs" Line="165" Column="14" />
-      <File FileName="src/MenuController.cs" Line="112" Column="10" />
+      <File FileName="src/MenuController.cs" Line="310" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +14,7 @@
               <Node name="Resources" expanded="True" />
               <Node name="src" expanded="True">
                 <Node name="Model" expanded="True" />
-                <Node name="MenuController.cs" selected="True" />
+                <Node name="DiscoveryController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
