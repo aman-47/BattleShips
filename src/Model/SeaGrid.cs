@@ -77,13 +77,13 @@ public class SeaGrid : ISeaGrid
     /// <param name="x">x coordinate of the tile</param>
     /// <param name="y">y coordiante of the tile</param>
     /// <returns></returns>
-    public TileView get_Item(int x, int y)
+    public TileView Item(int x, int y)
     {
         return _GameTiles[x, y].View;
     }
 
     /// <summary>
-    /// AllDeployed checks if all the ships are deployed
+    /// AllDeployed checks if all the ships are deployedItem
     /// </summary>
     public bool AllDeployed
     {
