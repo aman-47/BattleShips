@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Model/AIHardPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/UtilityFunctions.cs">
     <Files>
       <File FileName="src/GameMain.cs" Line="18" Column="51" />
       <File FileName="src/DiscoveryController.cs" Line="56" Column="81" />
       <File FileName="src/DeploymentController.cs" Line="165" Column="14" />
       <File FileName="src/Model/AIPlayer.cs" Line="162" Column="1" />
       <File FileName="src/Model/AIMediumPlayer.cs" Line="25" Column="19" />
-      <File FileName="src/Model/AIHardPlayer.cs" Line="158" Column="108" />
+      <File FileName="src/Model/AIHardPlayer.cs" Line="393" Column="117" />
+      <File FileName="src/UtilityFunctions.cs" Line="142" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,9 +16,8 @@
             <Node name="MyGameUnx" expanded="True">
               <Node name="Resources" expanded="True" />
               <Node name="src" expanded="True">
-                <Node name="Model" expanded="True">
-                  <Node name="AIHardPlayer.cs" selected="True" />
-                </Node>
+                <Node name="Model" expanded="True" />
+                <Node name="UtilityFunctions.cs" selected="True" />
               </Node>
             </Node>
           </Node>
