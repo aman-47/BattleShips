@@ -1,11 +1,3 @@
-/// <summary>
-/// The SeaGrid is the grid upon which the ships are deployed.
-/// </summary>
-/// <remarks>
-/// The grid is viewable via the ISeaGrid interface as a read only
-/// grid. This can be used in conjuncture with the SeaGridAdapter to
-/// mask the position of the ships.
-/// </remarks>
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,12 +12,21 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 
+/// <summary>
+/// The SeaGrid is the grid upon which the ships are deployed.
+/// </summary>
+/// <remarks>
+/// The grid is viewable via the ISeaGrid interface as a read only
+/// grid. This can be used in conjuncture with the SeaGridAdapter to
+/// mask the position of the ships.
+/// </remarks>
+
 public class SeaGrid : ISeaGrid
 {
     private const int _WIDTH = 10;
     private const int _HEIGHT = 10;
 
-    private Tile[,] _GameTiles = new Tile[Width - 1 + 1, Height - 1 + 1];
+    private Tile [,] _GameTiles;
     private Dictionary<ShipName, Ship> _Ships;
     private int _ShipsKilled = 0;
 
@@ -77,9 +78,9 @@ public class SeaGrid : ISeaGrid
     /// <param name="x">x coordinate of the tile</param>
     /// <param name="y">y coordiante of the tile</param>
     /// <returns></returns>
-    TileView ISeaGrid.Item
+    public TileView this[int x, int y]
     {
-        get { return _GameTiles (x, y).View; }
+        get { return _GameTiles [x, y].View; }
     }
 
     /// <summary>
@@ -104,6 +105,7 @@ public class SeaGrid : ISeaGrid
     /// </summary>
     public SeaGrid(Dictionary<ShipName, Ship> ships)
     {
+        _GameTiles = new Tile [Width - 1 + 1, Height - 1 + 1];
         // fill array with empty Tiles
         int i = default(int);
         var loopTo = Width - 1;
@@ -126,7 +128,7 @@ public class SeaGrid : ISeaGrid
     /// <param name="direction">the direction the ship is going</param>
     public void MoveShip(int row, int col, ShipName ship, Direction direction)
     {
-        Ship newShip = _Ships(ship);
+        Ship newShip = _Ships[ship];
         newShip.Remove();
         AddShip(row, col, direction, newShip);
     }
@@ -147,7 +149,7 @@ public class SeaGrid : ISeaGrid
             int currentCol = col;
             int dRow = default(int), dCol = default(int);
 
-            if (direction == direction.LeftRight)
+            if (direction == Direction.LeftRight)
             {
                 dRow = 0;
                 dCol = 1;
