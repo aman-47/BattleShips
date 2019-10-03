@@ -128,12 +128,13 @@ public static class GameResources
 
         public static void LoadResources()
         {
-            int width, height;
+            int width = 0;
+            int height = 0;
 
-            width = SwinGame.ScreenWidth();
-            height = SwinGame.ScreenHeight();
+            //width = SwinGame.ScreenWidth();
+            //height = SwinGame.ScreenHeight();
 
-            SwinGame.ChangeScreenSize(800, 600);
+            //SwinGame.ChangeScreenSize(800, 600);
 
             ShowLoadingScreen();
 

@@ -11,8 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using SwinGameSDK;
-namespace BattleShips
-{
+
     /// <summary>
 
     /// The DeploymentController controls the players actions
@@ -167,4 +166,5 @@ namespace BattleShips
             return ShipName.None;
         }
     }
-}
+
+
