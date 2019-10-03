@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Model/Ship.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Model/AIMediumPlayer.cs">
     <Files>
       <File FileName="src/GameMain.cs" Line="18" Column="51" />
       <File FileName="src/DiscoveryController.cs" Line="56" Column="81" />
@@ -7,7 +7,8 @@
       <File FileName="src/Model/AIPlayer.cs" Line="162" Column="1" />
       <File FileName="src/Model/ISeaGrid.cs" Line="37" Column="45" />
       <File FileName="src/Model/SeaGridAdapter.cs" Line="100" Column="6" />
-      <File FileName="src/Model/Ship.cs" Line="110" Column="23" />
+      <File FileName="src/Model/Ship.cs" Line="1" Column="14" />
+      <File FileName="src/Model/AIMediumPlayer.cs" Line="72" Column="108" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +18,7 @@
               <Node name="Resources" expanded="True" />
               <Node name="src" expanded="True">
                 <Node name="Model" expanded="True">
-                  <Node name="Ship.cs" selected="True" />
+                  <Node name="AIMediumPlayer.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
