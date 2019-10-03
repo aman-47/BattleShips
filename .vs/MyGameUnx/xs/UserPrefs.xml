@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Model/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/HighScoreController.cs">
     <Files>
       <File FileName="src/GameMain.cs" Line="18" Column="51" />
       <File FileName="src/DiscoveryController.cs" Line="56" Column="81" />
       <File FileName="src/DeploymentController.cs" Line="165" Column="14" />
       <File FileName="src/MenuController.cs" Line="310" Column="10" />
-      <File FileName="src/Model/Player.cs" Line="131" Column="6" />
       <File FileName="src/HighScoreController.cs" Line="130" Column="61" />
     </Files>
     <Pads>
@@ -15,9 +14,8 @@
             <Node name="MyGameUnx" expanded="True">
               <Node name="Resources" expanded="True" />
               <Node name="src" expanded="True">
-                <Node name="Model" expanded="True">
-                  <Node name="Player.cs" selected="True" />
-                </Node>
+                <Node name="Model" expanded="True" />
+                <Node name="HighScoreController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
