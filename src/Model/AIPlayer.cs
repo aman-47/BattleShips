@@ -1,7 +1,3 @@
-/// <summary>
-/// The AIPlayer is a type of player. It can readomly deploy ships, it also has the
-/// functionality to generate coordinates and shoot at tiles
-/// </summary>
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,6 +10,12 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
+using SwinGameSDK;
+
+/// <summary>
+/// The AIPlayer is a type of player. It can readomly deploy ships, it also has the
+/// functionality to generate coordinates and shoot at tiles
+/// </summary>
 
 public abstract class AIPlayer : Player
 {
@@ -133,7 +135,7 @@ public abstract class AIPlayer : Player
             result = _game.Shoot(row, column);
             ProcessShot(row, column, result);
         }
-        while (result.Value != ResultOfAttack.Miss && result.Value != ResultOfAttack.GameOver && !SwinGame.WindowCloseRequested)// generate coordinates for shot// take shot
+        while (result.Value != ResultOfAttack.Miss && result.Value != ResultOfAttack.GameOver && !SwinGame.WindowCloseRequested())// generate coordinates for shot// take shot
 ;
 
         return result;
@@ -148,7 +150,7 @@ public abstract class AIPlayer : Player
         for (i = 0; i <= 150; i++)
         {
             // Dont delay if window is closed
-            if (SwinGame.WindowCloseRequested)
+            if (SwinGame.WindowCloseRequested())
                 return;
 
             SwinGame.Delay(5);

@@ -1,7 +1,3 @@
-/// <summary>
-/// The ISeaGrid defines the read only interface of a Grid. This
-/// allows each player to see and attack their opponents grid.
-/// </summary>
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,6 +10,11 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
+
+/// <summary>
+/// The ISeaGrid defines the read only interface of a Grid. This
+/// allows each player to see and attack their opponents grid.
+/// </summary>
 
 public interface ISeaGrid
 {
@@ -33,7 +34,7 @@ public interface ISeaGrid
     /// <param name="column">the column to access</param>
     /// <value>what the player can see at that location</value>
     /// <returns>what the player can see at that location</returns>
-    TileView Item { get; }
+    TileView this[int row, int col] { get; }
 
     /// <summary>
     /// Mark the indicated tile as shot.

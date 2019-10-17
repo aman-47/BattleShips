@@ -14,7 +14,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
+//using Microsoft.VisualBasic.CompilerServices;
 
 public class Tile
 {
@@ -84,7 +84,7 @@ public class Tile
                     _Ship.AddTile(this);
             }
             else
-                throw new InvalidOperationException("There is already a ship at [" + Conversions.ToString(Row) + ", " + Conversions.ToString(Column) + "]");
+                throw new InvalidOperationException("There is already a ship at [" + Convert.ToString(Row) + ", " + Convert.ToString(Column) + "]");
         }
     }
 

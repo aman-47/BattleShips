@@ -1,7 +1,3 @@
-/// <summary>
-/// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
-/// all ships are deployed and if all ships are detroyed. A Player can also attach.
-/// </summary>
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,12 +12,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 
+/// <summary>
+/// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
+/// all ships are deployed and if all ships are detroyed. A Player can also attach.
+/// </summary>
+
 public class Player : IEnumerable<Ship>
 {
     protected static Random _Random = new Random();
 
     private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
-    private SeaGrid _playerGrid = new SeaGrid(_Ships);
+    private SeaGrid _playerGrid;
     private ISeaGrid _enemyGrid;
     protected BattleShipsGame _game;
 
@@ -61,6 +62,7 @@ public class Player : IEnumerable<Ship>
     public Player(BattleShipsGame controller)
     {
         _game = controller;
+        _playerGrid = new SeaGrid (_Ships);
 
         // for each ship add the ships name so the seagrid knows about them
         foreach (ShipName name in Enum.GetValues(typeof(ShipName)))
@@ -125,12 +127,12 @@ public class Player : IEnumerable<Ship>
     /// <value>The ship</value>
     /// <returns>The ship with the indicated name</returns>
     /// <remarks>The none ship returns nothing/null</remarks>
-    public Ship get_Ship(ShipName name)
+    public Ship Ship(ShipName name)
     {
         if (name == ShipName.None)
             return null;
 
-        return _Ships.Item;
+        return _Ships[name];
     }
 
     /// <summary>
@@ -193,6 +195,11 @@ public class Player : IEnumerable<Ship>
         return lst.GetEnumerator();
     }
 
+    IEnumerator<Ship> IEnumerable<Ship>.GetEnumerator ()
+    {
+        return GetShipEnumerator ();
+    }
+
     /// <summary>
     /// Makes it possible to enumerate over the ships the player
     /// has.
@@ -206,7 +213,7 @@ public class Player : IEnumerable<Ship>
         lst.AddRange(result);
 
         return lst.GetEnumerator();
-    }
+    }   
 
     /// <summary>
     /// Vitual Attack allows the player to shoot
@@ -231,14 +238,14 @@ public class Player : IEnumerable<Ship>
 
         switch (result.Value)
         {
-            case var @case when @case == ResultOfAttack.Destroyed:
-            case var case1 when case1 == ResultOfAttack.Hit:
+            case ResultOfAttack.Destroyed:
+            case ResultOfAttack.Hit:
                 {
                     _hits += 1;
                     break;
                 }
 
-            case var case2 when case2 == ResultOfAttack.Miss:
+            case ResultOfAttack.Miss:
                 {
                     _misses += 1;
                     break;
@@ -286,4 +293,6 @@ public class Player : IEnumerable<Ship>
             while (!placementSuccessful);
         }
     }
+
+
 }

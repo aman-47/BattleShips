@@ -1,11 +1,3 @@
-/// <summary>
-/// A Ship has all the details about itself. For example the shipname,
-/// size, number of hits taken and the location. Its able to add tiles,
-/// remove, hits taken and if its deployed and destroyed.
-/// </summary>
-/// <remarks>
-/// Deployment information is supplied to allow ships to be drawn.
-/// </remarks>
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -18,6 +10,15 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
+
+/// <summary>
+/// A Ship has all the details about itself. For example the shipname,
+/// size, number of hits taken and the location. Its able to add tiles,
+/// remove, hits taken and if its deployed and destroyed.
+/// </summary>
+/// <remarks>
+/// Deployment information is supplied to allow ships to be drawn.
+/// </remarks>
 
 public class Ship
 {
@@ -107,7 +108,7 @@ public class Ship
         _tiles = new List<Tile>();
 
         // gets the ship size from the enumarator
-        _sizeOfShip = _shipName;
+        _sizeOfShip = (int) _shipName;
     }
 
     /// <summary>

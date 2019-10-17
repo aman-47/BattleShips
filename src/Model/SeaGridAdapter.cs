@@ -1,7 +1,3 @@
-/// <summary>
-/// The SeaGridAdapter allows for the change in a sea grid view. Whenever a ship is
-/// presented it changes the view into a sea tile instead of a ship tile.
-/// </summary>
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,10 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 
+/// <summary>
+/// The SeaGridAdapter allows for the change in a sea grid view. Whenever a ship is
+/// presented it changes the view into a sea tile instead of a ship tile.
+/// </summary>
+
 public class SeaGridAdapter : ISeaGrid
 {
     private SeaGrid _MyGrid;
-
     /// <summary>
     /// Create the SeaGridAdapter, with the grid, and it will allow it to be changed
     /// </summary>
@@ -36,7 +36,9 @@ public class SeaGridAdapter : ISeaGrid
     /// <param name="e">what needs to be redrawn</param>
     private void MyGrid_Changed(object sender, EventArgs e)
     {
-        Changed?.Invoke(this, e);
+        if (Changed != null) {
+			Changed(this, e);
+		}
     }
 
 
@@ -46,15 +48,18 @@ public class SeaGridAdapter : ISeaGrid
     /// <param name="x">tile x coordinate</param>
     /// <param name="y">tile y coordinate</param>
     /// <returns>a tile, either what it actually is, or if it was a ship then return a sea tile</returns>
-    public TileView Item(int x, int y)
-    {
-        TileView result = _MyGrid.Item(x, y);
+    public TileView this[int x, int y]     
+            { 
+                get 
+                    {
+                        TileView result = _MyGrid[x, y];
 
-        if (result == TileView.Ship)
-            return TileView.Sea;
-        else
-            return result;
-    }
+                        if (result == TileView.Ship)
+                            return TileView.Sea;
+                        else
+                            return result;
+                    }
+            }
 
     /// <summary>
     /// Indicates that the grid has been changed
@@ -82,6 +87,8 @@ public class SeaGridAdapter : ISeaGrid
             return _MyGrid.Height;
         }
     }
+
+
 
     /// <summary>
     /// HitTile calls oppon _MyGrid to hit a tile at the row, col

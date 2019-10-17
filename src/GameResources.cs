@@ -12,9 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using SwinGameSDK;
 
-namespace BattleShips
-{
-    public static class GameResources
+public static class GameResources
     {
         private static void LoadFonts()
         {
@@ -130,12 +128,13 @@ namespace BattleShips
 
         public static void LoadResources()
         {
-            int width, height;
+            int width = 0;
+            int height = 0;
 
-            width = SwinGame.ScreenWidth();
-            height = SwinGame.ScreenHeight();
+            //width = SwinGame.ScreenWidth();
+            //height = SwinGame.ScreenHeight();
 
-            SwinGame.ChangeScreenSize(800, 600);
+            //SwinGame.ChangeScreenSize(800, 600);
 
             ShowLoadingScreen();
 
@@ -212,8 +211,8 @@ namespace BattleShips
 
             fullW = (260 * number) / STEPS;
             SwinGame.DrawBitmap(_LoaderEmpty, BG_X, BG_Y);
-            SwinGame.DrawCell(_LoaderFull, 0, BG_X, BG_Y);
-            // SwinGame.DrawBitmapPart(_LoaderFull, 0, 0, fullW, 66, BG_X, BG_Y)
+            //SwinGame.DrawCell(_LoaderFull, 0, BG_X, BG_Y);
+            SwinGame.DrawBitmapPart(_LoaderFull, 0, 0, fullW, 66, BG_X, BG_Y);
 
             toDraw.X = TX;
             toDraw.Y = TY;
@@ -304,4 +303,4 @@ namespace BattleShips
             SwinGame.ProcessEvents();
         }
     }
-}
+
