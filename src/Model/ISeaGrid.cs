@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualBasic;
+//using Microsoft.VisualBasic;
 
 /// <summary>
 /// The ISeaGrid defines the read only interface of a Grid. This

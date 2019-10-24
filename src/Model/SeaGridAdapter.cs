@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualBasic;
+//using Microsoft.VisualBasic;
 
 /// <summary>
 /// The SeaGridAdapter allows for the change in a sea grid view. Whenever a ship is
